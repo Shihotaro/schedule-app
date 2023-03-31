@@ -1,0 +1,28 @@
+.appTitle{
+    text-align: center;
+}
+
+.menuBar{
+    display: flex;
+    justify-content: space-between
+}
+
+.deleteButton{
+    border: none;
+    background-color: inherit;
+    color:#007bff;
+}
+
+.amount{
+    font-weight: bold;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topBar{
+    display: flex;
+    justify-content: space-between;
+}
