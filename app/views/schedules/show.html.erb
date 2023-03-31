@@ -1,0 +1,32 @@
+<h1>スケジュール詳細</h1>
+<div class="topBar">
+  <p><%=link_to"←一覧に戻る",schedules_path%></p>
+  <p><%=link_to"編集",edit_schedule_path%></p>
+</div>
+<table>
+    <tr>
+    <td><%= @schedule.title %></td>
+  </tr>
+  <tr>
+    <th>開始日</th>
+    <td><%= @schedule.startDay.strftime("%Y/%m/%d") %></td>
+  </tr>
+  <tr>
+    <th>終了日</th>
+    <td><%= @schedule.finalDay.strftime("%Y/%m/%d") %></td>
+  </tr>
+  <tr>
+    <th>終日</th>
+    <td>
+      <% if @schedule.allDay == true %>
+      <%= "○" %>
+      <% else @schedule.allDay == false %>
+      <%= "" %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <th>スケジュールメモ</th>
+    <td><%= @schedule.scheduleMemo %></td>
+  </tr>
+</table>

@@ -1,0 +1,32 @@
+<h1>予定を編集してください</h1>
+
+<%= form_with model:@schedule,local:true,method:"patch", data: { turbo: false } do |f| %>
+  
+  <div>
+    <label>タイトル</label>
+    <%= f.text_field:title %>
+  </div>
+
+  <div>
+    <label>開始日</label>
+    <%= f.date_field:startDay %>
+  </div>
+
+  <div>
+    <LABEL>終了日</label>
+    <%= f.date_field:finalDay %>
+  </div>
+
+ <div>
+    <%= f.check_box:allDay %>
+    <label>終日の場合はチェックを入れます</label>
+  </div>
+
+  <div>
+    <label>スケジュールメモ</label>
+    <%= f.text_field:scheduleMemo %>
+  </div>
+
+  <%= link_to "キャンセル",schedules_path%>
+  <%= f.submit "保存"%>
+<% end %>
